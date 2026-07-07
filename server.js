@@ -5,6 +5,9 @@ const port = 3000;
 
 const app = express();
 
+app.set('case sensitive routing', true);
+app.set('strict routing', true);
+
 app.get('/', (req, res) => res.status(200).type('text/plain').send('Hello, World!\n'));
 
 app.get('/good-evening', (req, res) => res.status(200).type('text/plain').send('Good evening'));
